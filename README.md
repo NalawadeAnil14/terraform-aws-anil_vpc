@@ -1,5 +1,12 @@
-AWS VPC Terraform module
-Terraform module which creates VPC resources on AWS.
+#AWS VPC Terraform module
+#Terraform module which creates VPC resources on AWS.
+
+## Features
+
+- Creates VPC
+- Creates public/private subnets
+- Creates Internet Gateway
+- Create Route table
 
 ## Usage 
 ```hcl
