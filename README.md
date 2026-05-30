@@ -1,8 +1,8 @@
 AWS VPC Terraform module
 Terraform module which creates VPC resources on AWS.
 
-Usage 
-
+## Usage 
+```hcl
 module "anil_vpc" {
   source  = "NalawadeAnil14/anil_vpc/aws"
   cidr_block = "10.0.0.0/16"
@@ -10,3 +10,4 @@ module "anil_vpc" {
   public_subnet_cidr  =  ["10.0.101.0/24", "10.0.102.0/24", "10.0.103.0/24"]
   availability_zone    = ["us-east-1a", "us-east-1b", "us-east-1c"]
 }
+```
