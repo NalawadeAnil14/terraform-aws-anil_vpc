@@ -18,6 +18,16 @@ output "private_subnet_ids" {
   value       = { for az, sub in aws_subnet.private_subnet : "${az}-private" => sub.id }
 }
 
+output "public_subnet_cidr_blocks" {
+  description = "CIDR blocks of the created public subnets"
+  value       = { for az, sub in aws_subnet.public_subnet : "${az}-public" => sub.cidr_block }
+}
+
+output "private_subnet_cidr_blocks" {
+  description = "CIDR blocks of the created private subnets"
+  value       = { for az, sub in aws_subnet.private_subnet : "${az}-private" => sub.cidr_block }
+}
+
 output "internet_gateway_id" {
   description = "ID of the created Internet Gateway"
   value       = aws_internet_gateway.igw.id
